@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eyama66.github.io/latiaozi-exp/sitemap.xml
