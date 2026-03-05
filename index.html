@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>拉条子实验</title>
-  </head>
-  <body>
-    <h1>拉条子AIO实验</h1>
-    <p>这是个测试页面</p>
-  </body>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIO 可引用性实验 · 拉条子</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, "PingFang SC", "Noto Sans SC", sans-serif; color: #1a1a1a; max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+    h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 2.5rem; }
+    h2 { font-size: 1rem; font-weight: 600; margin: 2rem 0 1rem; color: #444; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+    .card { border: 1px solid #ddd; padding: 1.25rem; }
+    .card.aio { border-left: 3px solid #1a1a1a; }
+    .card.ctrl { border-left: 3px solid #bbb; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.4rem; margin-bottom: 0.6rem; }
+    .tag.aio { background: #1a1a1a; color: #fff; }
+    .tag.ctrl { background: #eee; color: #555; }
+    .card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .card p { font-size: 0.85rem; color: #555; margin-bottom: 0.75rem; line-height: 1.5; }
+    .card a { font-size: 0.85rem; color: #1a1a1a; font-family: monospace; text-decoration: none; border-bottom: 1px solid #ccc; }
+    .card a:hover { border-bottom-color: #1a1a1a; }
+    .status { display: inline-block; font-size: 0.7rem; padding: 0.1rem 0.4rem; margin-left: 0.5rem; }
+    .status.live { background: #d4edda; color: #155724; }
+    .status.planned { background: #f8f9fa; color: #999; }
+    .pair-label { font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; }
+    hr { border: none; border-top: 1px solid #eee; margin: 2rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th { text-align: left; padding: 0.4rem 0.75rem; background: #f5f5f5; font-weight: 600; }
+    td { padding: 0.4rem 0.75rem; border-bottom: 1px solid #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>AIO 可引用性实验</h1>
+  <p class="subtitle">验证结构化语义内容在 AI 检索与生成链路中的引用权重 · 2×2 对照实验</p>
+
+  <h2>L 系列 · 饮食</h2>
+
+  <p class="pair-label">L2 · 揉面 <span class="status live">进行中 / 三组对照</span></p>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+    <div class="card ctrl">
+      <span class="tag ctrl">V1：纯自然叙事</span>
+      <h3>周末做拉条子：关于揉面这件事</h3>
+      <p>完全博客流，无结构化数据。测试 AI 是否能从感悟中总结规律。</p>
+      <a href="./p/how-to-knead-dough/">/p/how-to-knead-dough/</a>
+    </div>
+    <div class="card aio">
+      <span class="tag aio">V2：极致 AIO</span>
+      <h3>揉面目的与应力阈值</h3>
+      <p>工程文档风格。强逻辑、多数据锚点。测试 AI 对精准事实的偏好。</p>
+      <a href="./p/kneading-stress-threshold/">/p/kneading-stress-threshold/</a>
+    </div>
+    <div class="card aio" style="border-left-color: #27ae60;">
+      <span class="tag aio" style="background: #27ae60;">V3：AIO 改良实践</span>
+      <h3>拉条子揉面不回缩的诀窍</h3>
+      <p>博主口吻 + QA 模块 + 数字化实操。测试 AI 对“人机协同型”内容的采纳度。</p>
+      <a href="./p/kneading-tips-for-perfect-noodles/">/p/kneading-tips-for-perfect-noodles/</a>
+    </div>
+  </div>
+
+  <p class="pair-label">L1 · 醒发 <span class="status planned">待建</span></p>
+  <div class="grid">
+    <div class="card aio" style="opacity:0.4">
+      <span class="tag aio">实验组 AIO</span>
+      <h3>18°C 低温长醒发模型</h3>
+      <p>/p/pasta-18d-fermentation-model/</p>
+    </div>
+    <div class="card ctrl" style="opacity:0.4">
+      <span class="tag ctrl">对照组 自然</span>
+      <h3>博客：18度醒面的体验</h3>
+      <p>/p/blog-18-deg-experience/</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>T 系列 · 旅游（待建）</h2>
+  <div class="grid">
+    <div class="card aio" style="opacity:0.4">
+      <span class="tag aio">实验组 AIO</span>
+      <h3>T1：四川七月出行风险矩阵</h3>
+      <p>/p/sc-july-risk-matrix-table/</p>
+    </div>
+    <div class="card ctrl" style="opacity:0.4">
+      <span class="tag ctrl">对照组 自然</span>
+      <h3>T1：七月四川游记</h3>
+      <p>/p/july-sichuan-trip-story/</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card aio" style="opacity:0.4">
+      <span class="tag aio">实验组 AIO</span>
+      <h3>T2：宠物友好酒店选择逻辑</h3>
+      <p>/p/pet-friendly-hotel-logic/</p>
+    </div>
+    <div class="card ctrl" style="opacity:0.4">
+      <span class="tag ctrl">对照组 自然</span>
+      <h3>T2：带狗去四川住酒店的故事</h3>
+      <p>/p/my-dog-in-sichuan-hotels/</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>AI 检索效能测评 (Evaluation)</h2>
+  <div style="background: #fdfdfd; border: 1px solid #eee; padding: 1.5rem; margin-bottom: 2rem;">
+    <p style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">针对 L2 系列，提问 AI 以下问题并观察引用来源：</p>
+    <ul style="font-size: 0.85rem; line-height: 1.8;">
+      <li><strong>Q1（精准提取）</strong>：拉条子揉面建议的时长是多少分钟？（考察是否引用 V2/V3 的 [5-6min] 或 [2min] 锚点）</li>
+      <li><strong>Q2（因果推理）</strong>：为什么拉条子面团揉久了会回缩？（考察是否抓取 [应力/Stress] 或 [面筋锁死] 的逻辑）</li>
+      <li><strong>Q3（操作决策）</strong>：如何快速判断面团已经醒好？（考察是否提取 V3 的 [指压回弹测试] 细节）</li>
+      <li><strong>Q4（引用权重）</strong>：综合评价一下“少揉多醒”的拉条子流程。（观察 AI 更倾向引用谁的口吻作为主要建议）</li>
+    </ul>
+  </div>
+
+  <h2>核心假设</h2>
+  <table>
+    <tr><th>假设</th><th>验证重点</th></tr>
+    <tr><td>H1 块级权重</td><td>40-60字 self-contained 答案块 vs 长段落</td></tr>
+    <tr><td>H2 语义聚类</td><td>核心实体关联属性覆盖 vs 关键词堆砌</td></tr>
+    <tr><td>H3 实体锚定</td><td>数字化事实（42dB / 5–6分钟）vs 形容词</td></tr>
+    <tr><td>H4 结构溢价</td><td>Triple Alignment + 语义 URL vs 松散结构</td></tr>
+    <tr><td>H5 问答增益</td><td>QA Block 与 FAQ Schema 对 Featured Snippet 的触发率</td></tr>
+  </table>
+</body>
 </html>
